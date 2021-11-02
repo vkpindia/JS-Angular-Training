@@ -1,0 +1,37 @@
+1. For using the JS we should include <script> tag 
+in html file in body section
+
+<script>
+   //write js code
+</script>
+
+2. Characterset
+
+it use the unicode character set. it allows almost all the symbols
+, panctuations, characters.
+
+3. Case Sensitive
+
+var name;
+console.log(Name);//Error: Name is not declared
+console.log(name);// undefined
+
+4. Semicolon
+
+Statements should be separated by semicolon(;)
+but it is not mandatory
+but it is recommended 
+
+var x; y=20;
+console.log(y);
+
+5. Whitespaces
+
+var x=10; 
+var y=  20;
+var name    =    'Scott'
+
+
+6. Code Comments:
+single line comments (//)
+Multiline comments (/* */)
