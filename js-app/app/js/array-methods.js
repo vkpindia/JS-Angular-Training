@@ -126,3 +126,65 @@ getArrayEle(grid);
   * some()
   * every()
 */
+
+/* 
+  * map()
+  * map() executes the same code on every element in an array and returns a new array
+  *  with the updated elements
+*/
+
+let consts = [100, 400, 300, 700];
+
+let newCost = consts.map((costItem, index) =>{
+    return costItem/10;
+        console.log('costItem', costItem, index);
+});
+console.log('consts', consts);
+console.log('newCost', newCost);
+
+/* 
+ * forEach(): is used to execute the same code on every element in an array but 
+ * does not change the array and it returns undefines
+*/
+
+var newCosts = consts.forEach((costItem, index) =>{
+    // consts[index] = costItem/10;
+     console.log('costItem', costItem, index);
+});
+console.log('consts', consts);
+console.log('newCost', newCosts);
+
+/* 
+  * filter(): checks every element in an array to see if it meets a certain 
+condition and return a new array with the elements that satisfy the certain
+criteria
+*/
+
+let newCostss = consts.filter((costItem, index) => costItem>200);
+console.log('consts', consts);
+console.log('newCost', newCostss);
+
+var obj_1 = {
+    empId: 1024,
+    empName: 'Ashok',
+    email: 'ashok@gmail.com',
+    phone: '6745675498',
+    companyName: 'West Corporation'
+  };
+
+
+  // for...in loop
+
+  for(key in obj_1){
+      console.log(key + ': ' + obj_1[key]);
+  }
+
+  // To getting keys of an object in an array
+
+  let objKeys = Object.keys(obj_1);
+  let objKeyValue = Object.values(obj_1);
+  let objKeyValue1 = Object.entries(obj_1);
+  console.log('objKeyValue', objKeyValue);
+  console.log('objKeyValue1', objKeyValue1);
+  console.log('objKeys', objKeys);
+  
