@@ -51,3 +51,124 @@ let promise = new Promise(function(resolve, reject){
  error when reject(error) is called
 */
 
+// A promise is a good way to handle asynchronous calls or operations.It is used 
+// to find out if the asynchronous operations are successfully completed or not.
+
+// Create a promise
+
+let prmise = new Promise(function(resolve , reject){
+
+});
+
+// The prpmise constructor takes a function as an arguement. the function also 
+// accepts two functions 
+// 1. resolve()
+// 2. reject()
+
+
+// const count = true;
+
+function countValue(count){
+    return new Promise((resolve, reject)=>{
+        if(count) {
+            resolve("There is a count value");
+        } else {
+            reject("There is no count value");
+        }
+    });
+}
+// console.log('countValue', countValue(true));
+// console.log('count', count);
+
+// JavaScript promise channing
+
+/* 
+ * Promise are useful when you have to handle more than one synchronous request,
+   one after another, for that we do promise chaining
+
+   you can perform operations after a promise is resolved using method then()
+*/
+
+// Javascript then() method
+
+/* 
+   Then method is used to callback when the promise is succesfullt fulfilled or resolves
+
+   the syntax of then is:
+
+   promiseObj.then(onfulfilled, onRejected);
+*/
+
+
+countValue(true).then(res=>{
+    console.log('res', res);
+});
+
+
+/* 
+ * catch() method: is used with the callback when the promise rejected or if any error
+ occures
+*/
+
+countValue(false).then(res=>{
+    console.log('res', res);
+}).catch(err=>{
+    console.error('err', err);
+});
+
+/* 
+ * finally(): you can use the finally method with 'promise. The finally() method gets 
+executed when the promise is either resolved or rejected
+*/
+
+let countValue_1 = new Promise((resolve, reject )=>{
+    // Could be resolved or rejected
+    resolve('Promise resolved');
+});
+
+countValue_1.finally(()=>{
+   console.log('Code is executed');
+});
+
+// Promise methods
+
+/* 
+  all(iterables)
+  allSettled(iterables)
+  any(iterables)
+  race(iterables)
+*/
+
+// API calls with promise and XMLHttpRequest
+
+function loadMessage(url){
+    return new Promise((resolve, reject)=>{
+        const http = new XMLHttpRequest();
+
+        http.onreadystatechange = function(e){
+            if(this.readyState == 4) {
+                if(this.status == 200){
+                    resolve(this.response);
+                } else {
+                    reject(this.status);
+                }
+            }
+        }
+        http.open('GET', url, true);
+        http.send();
+    });
+}
+
+function getMessage(){
+    let url = 'http://jsonblob.com/910901864581840896'
+    let btn = document.getElementById('btnGet');
+    let msg = document.getElementById('message');
+
+    loadMessage(url).then(res=>{
+        console.log('res', res);
+    }).catch(err=>{
+        console.error('err', err);
+    });
+}
+
+getMessage();
