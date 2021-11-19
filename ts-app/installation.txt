@@ -1,0 +1,28 @@
+there are three ways to install typesscript
+
+
+1. Install TypeScript as an NPM package on the local machine
+2. Install TypeScript NuGet package
+3. Install TypeScipt as a plugin in your ide
+
+
+// Install by NPM
+
+1. We need to install node.js in the local machine form nodejs.org site
+2. Along with NPM(Node Package Manager) will get installed
+
+We can run below command to install TypeScipt
+
+npm install -g TypeScript
+
+To check typescript installation we can use below command
+
+tsc -v
+
+
+
+If you don't want to install typescript gloablly in machine then
+we can run below command to install locally 
+
+npm install typescript --save-dev
+

@@ -1,0 +1,17 @@
+1. TypeScript is an open-source, object-oriented scripting language
+developped and maintained by microsoft.
+
+2. TypeScript extends the functionalities by adding data types, classes and other
+ OOPS features with type checking.
+
+3. It is a typed superset of JavaScript that compiles plain JavaScript
+
+
+// TypeScript features
+
+1. Cross Plateform
+2. It Supports OOPS
+3. Static type checking
+4. DOM manipulation
+5. ES6 features
+7. Mudularity
