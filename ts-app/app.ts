@@ -7,9 +7,9 @@
 
 tsc filename.ts
 
-4. Ts file will compile and create a new a new file with same name but with .js 
+4. Ts file will compile and create a new file with same name but with .js 
 extension
-5. Then we can use transpiled js file in html code
+5. Then we can use transpiled js file in html code by using <script> tag
 */
 
 function showMessage(){
