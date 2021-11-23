@@ -1,5 +1,5 @@
 /* 1. In javaScript, function is a named block of set of statements/instruction to perform 
-specific action  
+specific action/task
 * Javascript allows to define a block of code and it gave a name and the execute as
 * requirment
 * After defining a function for performing action we have execute to get the result

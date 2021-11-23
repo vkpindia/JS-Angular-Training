@@ -1,0 +1,83 @@
+1. What is a function?
+
+* A function is a named block of set of statemnets/intructions to perform
+specific action/task
+
+* function can be reusable by calling  from other parts of the program
+
+* Functions organize the program into logical blocks of code
+
+* Function make it easy to read and maintain the application logical
+
+NOTE: In OOP, class defines fuction to perform operations on data
+
+
+SYNTAX:
+
+function fn_name(parameters): return_type {
+   // statemnets/logic 
+}
+
+
+-> parameters and return type is optional in function definition
+-> By default return type for a function in typescript is void
+
+
+Function Parameter Type:
+
+-> Parameter are a machanism/techniq to pass values to Functions
+-> TypeScript supports different types of parameters:
+
+1. Optional parameters
+2. Default parameters
+3. Rest parameters
+
+
+Optional parameters:
+
+-> Optional parameters can be used when arguements need not to be compulsory
+passed for a function execuation
+
+-> A parameter can be marked optional by appending a question mark(?)
+to its name
+
+-> The optional parameters should be set as the last arguement in a function
+
+SYNTAX:
+
+function fn_name(x:type, y?:type): return_type{
+  if(y==undefined){
+      // Y does not contains data
+  } else {
+      // Y contains data
+  }
+
+  // FUnction statemnets
+}
+
+Default Parameters:
+
+-> function parameters can be also assigned values by default
+-> However, such parameters can also be passed values explicitely
+
+
+Syntax: 
+ function fn_name(n:type = value): return_type {
+     // function logic
+ }
+
+
+
+Rest parameters:=>
+
+-> Rest parameters are used to handle unspecified number arguements
+-> it do not restrict the numbers of values that you can pass to a function
+-> The values which is passed to function must be all of the same type
+-> Rest parameter should be array type.
+
+
+SYNTAX: 
+
+function fn_name(...ar:number[]): return_type {
+    // logic
+}
