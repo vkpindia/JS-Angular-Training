@@ -1,0 +1,101 @@
+Object Oriented Programming in TypeScript:
+_________________________________________
+
+1. OOPS is a techniq/paradigm that relies the concept of classes and objects
+2. It is used to structure a software program into simple, reusable 
+pieces of code blueprints
+
+There are many object oriented programming languages like,
+TypeScript, JavaScript, Java and Python etc.
+
+* It refers to a type of programming techniq in which programmers define 
+data and its operations
+
+* In OOPS, Class defines variables(properties) and its functions(method)
+in one unit.
+
+Principle OF OOPS:
+_________________________________________
+
+=> Every programming languages should support the folllowing  fundamental
+Principles
+
+1. Abstraction
+2. Inheritance
+3. Polymorphism
+4. Encapsulation
+
+
+Advantages Of OOP:
+_________________________________________
+
+1. Modularity
+2. Reusability
+3. Data Security
+
+
+To Implementing OOP in TypeScript:
+_________________________________________
+
+-> TypeScript is also object oriented programming languages
+-> TS supports all OOPS concepts like classes, Objects, constructors, 
+Inheritance and interface
+
+
+Creating a class in TypeScript:
+_________________________________________
+
+-> class keyword is used to declare a class
+-> We muct provide a class name whitch should form Capital letter and next 
+associated words also will start from capital later
+
+-> And also to declare a class body we need to use curly braces({});
+
+Syntax: 
+
+class ClassName {
+    // Fields and methods
+}
+
+Ex:
+
+class Students {
+    public sid: number = 1025;
+    public sname: string = 'Smith';
+}
+
+
+Rules that we follow in TS to develop a class
+_____________________________________________
+
+* Do not use 'var/let/const' keyword to declare varibales/fileds in class
+* Do not use 'function' keyword to define methods in class
+* Use 'this' keyword to access fileds inside class functions/methods
+* Each members of a class is declared as public by default
+
+
+Constructor in TypeScript:
+_________________________________________
+
+-> Constructor is special type of method used to intialize the intance
+at the time of creating  new object of a class
+
+-> Constrauctor method is created in typescript by usning 'constructor' keyword
+
+Syntax: 
+
+constructor(arg1, arg2,...arg_n){
+    // Logic
+}
+
+Ex:
+
+class Student {
+    public sid: number;
+    public sname: string
+
+    constructor(x: number, y: string){
+        this.sid = x;
+        this.sname = y;
+    }
+}
