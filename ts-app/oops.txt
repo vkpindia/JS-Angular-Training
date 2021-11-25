@@ -99,3 +99,74 @@ class Student {
         this.sname = y;
     }
 }
+
+
+Inheritance:
+_________________________________________
+
+-> Inheritance is one of the most important OOP Principle, It helps to reuse the 
+content/code of a class into another class.
+
+-> Inheritance have abilty to create classes from a existing class.
+
+-> The class which which share the code is called parent class/ base class
+and the newly created class is called child/sub/derived class
+
+-> The class which is inherited by other class for that we use 'extends' keyword
+-> Child/Sub/Derive classes inherit all fields and methods from the parent class
+
+Syntax:
+
+class ParentClass {
+    // class properties
+}
+
+class ChildClass extends ParentClass{
+    // class properties
+}
+
+
+Note: Use 'super' keyword to access parent class constructor inside the child class 
+
+
+interface in TypeScript:
+_________________________________________
+
+-> Interface is powerful concept in TypeScript to creating rules or to
+defining rules or making contracts of a object in Typescript.
+
+-> Interface only declare the members
+-> It is the responsibility of child class to define mebers of interface.
+class which is implemented interface must have to define the members of interface
+
+-> It provides the standard stucture that the derive class should follow
+
+
+Note:
+
+-> Child class should implement all the rules 
+-> If any rule is not implemented by the class, typescript compiler will 
+throw error.
+
+
+* 'interface' keyword is used to declare an interface;
+
+Syntax:
+
+interface interface_name {
+    // Properties
+}
+
+Usage:
+
+interface Test1 {
+    // members
+}
+
+class Demo implements Test1 {
+    // members
+}
+
+* Intefaces are not to be converted in JavaScript. It is compiled related to TS
+* At the time of compilation we will be noyified typescript compiler
+if any rule is not implemented.
