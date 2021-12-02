@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-app';
+
+  title = 'Angular Training';
+
+  sid = 1024;
+  sname = 'Smith';
+  course = 'Angular 13';
+  duration = 30;
+
+  uname = 'Scott';
 }
