@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
 
   title = 'Angular Training';
@@ -15,4 +16,11 @@ export class AppComponent {
   duration = 30;
 
   uname = 'Scott';
+  inputType = 'text';
+
+  courseList: string[] = ['HTML5', 'JQuery', 'Angular JS', 'Angular13', 'SCSS'];
+
+  displayCourseList(): void {
+
+  }
 }

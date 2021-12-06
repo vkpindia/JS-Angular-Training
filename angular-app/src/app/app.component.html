@@ -1,6 +1,6 @@
 <h2 align="center">{{title}}</h2>
 <hr />
-
+<input [type]="inputType">
 <h3>Developing Application Using Angular 13</h3>
 <hr>
 <h2>User Name: {{uname}}</h2>
@@ -27,5 +27,20 @@
   </p>
 </div>
 
+<hr />
+<h3>Course List</h3>
+<hr />
+
+<ul>
+  <li *ngFor="let course of courseList; let i = index">
+    <p><span>{{i+1}}</span> -> {{course}}</p>
+  </li>
+</ul>
 <!-- <app-home></app-home> -->
 <!-- <router-outlet></router-outlet> -->
+
+<hr />
+<h2>Data Binding</h2>
+<hr />
+
+<app-data-binding></app-data-binding>
