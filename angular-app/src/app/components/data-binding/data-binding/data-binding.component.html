@@ -9,19 +9,26 @@ Student Name <input type="text" (keyup)="getUpdatedData()" [(ngModel)]="uname">
 <h2>
   Display Image:
 </h2>
-
+<!-- <input type="text" [value]="imageName"  > -->
 <div>
-  <select [(ngModel)]="imageName">
+  <select [(ngModel)]="imageName" (change)="getImageIndex(imageName)">
     <option selected value="">Select Camera</option>
-    <ng-container *ngFor="let image of images">
+    <ng-container *ngFor="let image of images; let i = index">
       <option [value]="image.name">{{image.name | titlecase}}</option>
     </ng-container>
   </select>
 </div>
 
-<div *ngIf="imageName && imageName.length">
-  <h3>Name: {{imageName+'.jpg' | titlecase}}</h3>
-  <img width="250" height="230" src="assets/images/{{imageName}}.jpg" alt="">
+<div *ngIf="imageData && imageData.name">
+  <h3>Name: {{imageData.name+'.jpg' | titlecase}}</h3>
+  <img width="250" height="230" src="assets/images/{{imageData.name}}.jpg" [alt]="imageData.altText">
+  <p>{{imageData?.desc}}</p>
 </div>
+
+
+<ng-container [ngSwitch]="imageName">
+  <app-about *ngSwitchCase="'camera'"></app-about>
+  <app-home *ngSwitchCase="'camera1'"></app-home>
+</ng-container>
 
 
