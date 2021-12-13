@@ -15,7 +15,7 @@ export class AppComponent {
   course = 'Angular 13';
   duration = 30;
 
-  uname = 'Scott';
+  uname = 'scott';
   inputType = 'text';
 
   courseList: string[] = ['HTML5', 'JQuery', 'Angular JS', 'Angular13', 'SCSS'];

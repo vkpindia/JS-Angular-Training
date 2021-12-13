@@ -1,21 +1,22 @@
-<h2 align="center">{{title}}</h2>
+<h2 align="center">{{title | titlecase}}</h2>
 <hr />
-<input [type]="inputType">
-<h3>Developing Application Using Angular 13</h3>
+<input [type]="inputType" value="{{title | uppercase}}">
+<h3>{{'Developing Application Using Angular 13' | lowercase}}</h3>
 <hr>
-<h2>User Name: {{uname}}</h2>
+<h2>User Name: {{uname | titlecase}}</h2>
 <hr>
 
 <!-- Demonstrate Student Detail -->
 <div class="container">
-  <h3>Student Details</h3>
+  <h3>{{'Student Details' | uppercase}}</h3>
   <p>
     <strong>Student Id:&nbsp;</strong>
-    {{sid}}
+    {{sid'}}
+    {{sid | currency:'EUR'}}
   </p>
   <p>
     <strong>Student Name:</strong>
-    {{sname}}
+    {{sname | titlecase}}
   </p>
   <p>
     <strong>Course Name:&nbsp;</strong>
