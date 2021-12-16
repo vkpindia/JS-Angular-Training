@@ -1,0 +1,25 @@
+.container {
+  padding: 10px;
+  .customer-section {
+    background-color: blueviolet;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  .pagination {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    .page-item {
+      &:first-child{
+        flex: 1;
+      }
+      .page-link {
+        text-decoration: none;
+        background-color: #ccc;
+        padding: 8px 20px;
+        border-radius: 3px;
+      }
+    }
+  }
+}

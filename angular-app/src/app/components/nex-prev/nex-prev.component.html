@@ -1,0 +1,52 @@
+<!-- <hello name="{{ name }}"></hello> -->
+<header>
+  <div>
+    <h1 style="margin: 0" align="center">Customer data</h1>
+    <p>Date: {{date | date: 'M/y/dd hh:mm:ss a'}}</p>
+    <hr />
+  </div>
+</header>
+<!-- |slice:n:m -->
+<div class="container">
+  <div class="customer-section" *ngFor="let customer of customers | slice:n:m">
+    <div *ngFor="let key of customer | keyvalue:keyOrder">
+      {{key['key']}} : {{key['value'] | valuePrefix:'Mrs.': key['key'] |  gender: key['key']}}<br />
+    </div>
+  </div>
+  <ul class="pagination">
+    <li class="page-item">
+      <button class="page-link" href="javascript:void(0)" (click)="prevItem()" [disabled]="disableButton2">
+        Previous
+      </button>
+    </li>
+    <li class="page-item">
+      <button class="page-link" href="javascript:void(0)" (click)="nextItem()" [disabled]="disableButton1">
+        Next
+      </button>
+    </li>
+  </ul>
+</div>
+
+
+<div>
+  Search: <input type="text" [(ngModel)]='searchString'>
+  <table border="1" style="width: 100%;" cellSpacing="0" cellPadding="10">
+    <caption><strong>Customer List</strong></caption>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>City</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers | search: searchString">
+        <td>{{customer.Name | titlePrefix:customer.gender}}</td>
+        <td>{{customer.gender | genders}}</td>
+        <td>{{customer.City}}</td>
+        <td>{{customer.Country}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

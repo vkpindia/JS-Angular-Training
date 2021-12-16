@@ -9,6 +9,11 @@ import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './components/services/services.component';
 import { DataBindingComponent } from './components/data-binding/data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
+import { NexPrevComponent } from './components/nex-prev/nex-prev.component';
+import { PrefixPipe } from './pipes/prefix.pipe';
+import { GenderPipe } from './pipes/gender.pipe';
+import { TitlePrefixPipe, GendersPipe } from './pipes/title-prefix.pipe';
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +22,13 @@ import { FormsModule } from '@angular/forms';
     StudentComponent,
     AboutComponent,
     ServicesComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    NexPrevComponent,
+    PrefixPipe,
+    GenderPipe,
+    TitlePrefixPipe,
+    GendersPipe,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
