@@ -1,15 +1,15 @@
 
 
-<h2 align="center">{{title | titlecase}}</h2>
-<hr />
-<input [type]="inputType" value="{{title | uppercase}}">
+<!-- <h2 align="center">{{title | titlecase}}</h2>
+<hr /> -->
+<!-- <input [type]="inputType" value="{{title | uppercase}}">
 <h3>{{'Developing Application Using Angular 13' | lowercase}}</h3>
 <hr>
 <h2>User Name: {{uname}}</h2>
-<hr>
+<hr> -->
 
 <!-- Demonstrate Student Detail -->
-<div class="container">
+<!-- <div class="container">
   <h3>{{'Student Details' | uppercase}}</h3>
   <p>
     <strong>Student Id:&nbsp;</strong>
@@ -38,7 +38,7 @@
   <li *ngFor="let course of courseList; let i = index">
     <p><span>{{i+1}}</span> -> {{course}}</p>
   </li>
-</ul>
+</ul> -->
 <!-- <app-home></app-home> -->
 <!-- <router-outlet></router-outlet> -->
 
@@ -46,10 +46,10 @@
 <h2>Data Binding</h2>
 <hr /> -->
 
-Select Component: <select [(ngModel)]="componentType">
+<!-- Select Component: <select [(ngModel)]="componentType">
   <option value="1">Data Binding</option>
   <option value="2">Next Prev</option>
-</select><br>
+</select><br> -->
 
 
 <!-- <ng-container *ngIf="componentType==1">
@@ -61,7 +61,7 @@ Select Component: <select [(ngModel)]="componentType">
 </ng-container> -->
 
 
-<ng-container [ngSwitch]="componentType">
+<!-- <ng-container [ngSwitch]="componentType">
   <ng-container *ngSwitchCase="1">
     <app-data-binding></app-data-binding>
   </ng-container>
@@ -69,6 +69,8 @@ Select Component: <select [(ngModel)]="componentType">
   <ng-container *ngSwitchCase="2">
     <app-nex-prev></app-nex-prev>
   </ng-container>
-</ng-container>
+</ng-container> -->
+
+<app-items></app-items>
 
 

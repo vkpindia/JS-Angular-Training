@@ -14,6 +14,7 @@ import { PrefixPipe } from './pipes/prefix.pipe';
 import { GenderPipe } from './pipes/gender.pipe';
 import { TitlePrefixPipe, GendersPipe } from './pipes/title-prefix.pipe';
 import { SearchPipe } from './pipes/search.pipe';
+import { ItemsComponent } from './components/items/items.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SearchPipe } from './pipes/search.pipe';
     GenderPipe,
     TitlePrefixPipe,
     GendersPipe,
-    SearchPipe
+    SearchPipe,
+    ItemsComponent
   ],
   imports: [
     BrowserModule,
