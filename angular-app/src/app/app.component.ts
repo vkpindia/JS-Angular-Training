@@ -17,6 +17,7 @@ export class AppComponent {
 
   uname = 'scott';
   inputType = 'text';
+  componentType = 1;
 
   courseList: string[] = ['HTML5', 'JQuery', 'Angular JS', 'Angular13', 'SCSS'];
 

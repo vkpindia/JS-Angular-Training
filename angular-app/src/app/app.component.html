@@ -1,4 +1,4 @@
-<app-nex-prev></app-nex-prev>
+
 
 <h2 align="center">{{title | titlecase}}</h2>
 <hr />
@@ -44,6 +44,31 @@
 
 <!-- <hr />
 <h2>Data Binding</h2>
-<hr />
+<hr /> -->
 
-<app-data-binding></app-data-binding> -->
+Select Component: <select [(ngModel)]="componentType">
+  <option value="1">Data Binding</option>
+  <option value="2">Next Prev</option>
+</select><br>
+
+
+<!-- <ng-container *ngIf="componentType==1">
+  <app-data-binding></app-data-binding>
+</ng-container>
+
+<ng-container *ngIf="componentType==2">
+  <app-nex-prev></app-nex-prev>
+</ng-container> -->
+
+
+<ng-container [ngSwitch]="componentType">
+  <ng-container *ngSwitchCase="1">
+    <app-data-binding></app-data-binding>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="2">
+    <app-nex-prev></app-nex-prev>
+  </ng-container>
+</ng-container>
+
+
