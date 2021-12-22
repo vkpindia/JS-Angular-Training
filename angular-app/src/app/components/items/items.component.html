@@ -1,0 +1,27 @@
+<div class="item-header">
+  <h3>
+    {{pageTitle}}
+  </h3>
+</div>
+
+<div class="item-body">
+  <div class="item-form">
+    Enter Item: <input type="text" [(ngModel)]="item">
+    <button (click)="addItem()">Add Item</button>
+  </div>
+  <ul>
+    <!-- [ngClass]="{'active':slectedIndex==i, 'className': condition}" -->
+    <!-- [ngClass]="slectedIndex==i?'active': 'in-active'" -->
+    <li (click)="makeItemActive(i)" [ngStyle]="{'color':slectedIndex==i?'#008000':'' }"  *ngFor="let item of itemListData; let i = index">
+      <div>
+        <span>{{i+1}}.</span>
+        <span>{{item.name}}</span>
+      </div>
+      <div class="delete-icon" *ngIf="slectedIndex!=i">
+       <a href="javascript:void(0)" (click)="deleteItem(i)">
+        <span title="Delete Item" style="color: #f00;">&#x2717;</span>
+       </a>
+      </div>
+    </li>
+  </ul>
+</div>
