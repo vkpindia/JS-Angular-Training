@@ -15,6 +15,8 @@ import { GenderPipe } from './pipes/gender.pipe';
 import { TitlePrefixPipe, GendersPipe } from './pipes/title-prefix.pipe';
 import { SearchPipe } from './pipes/search.pipe';
 import { ItemsComponent } from './components/items/items.component';
+import { AddClassDirective } from './directives/add-class.directive';
+import { BgColorDirective } from './directives/bg-color.directive';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ItemsComponent } from './components/items/items.component';
     TitlePrefixPipe,
     GendersPipe,
     SearchPipe,
-    ItemsComponent
+    ItemsComponent,
+    AddClassDirective,
+    BgColorDirective
   ],
   imports: [
     BrowserModule,

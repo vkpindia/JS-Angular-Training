@@ -12,12 +12,12 @@
   <ul>
     <!-- [ngClass]="{'active':slectedIndex==i, 'className': condition}" -->
     <!-- [ngClass]="slectedIndex==i?'active': 'in-active'" -->
-    <li (click)="makeItemActive(i)" [ngStyle]="{'color':slectedIndex==i?'#008000':'' }"  *ngFor="let item of itemListData; let i = index">
+    <li appBgColor (click)="makeItemActive(i)" [ngStyle]="{'color':slectedIndex==i?'#008000':'' }"  *ngFor="let item of itemListData; let i = index">
       <div>
         <span>{{i+1}}.</span>
         <span>{{item.name}}</span>
       </div>
-      <div class="delete-icon" *ngIf="slectedIndex!=i">
+      <div class="delete-icon" *ngIf="slectedIndex!=i" [appAddClass] = "'blue'">
        <a href="javascript:void(0)" (click)="deleteItem(i)">
         <span title="Delete Item" style="color: #f00;">&#x2717;</span>
        </a>
