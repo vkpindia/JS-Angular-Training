@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/core';
+import { Directive, ElementRef, HostBinding, HostListener, Input, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[appAddClass]'
@@ -13,6 +13,7 @@ export class AddClassDirective implements OnInit{
     this.el.nativeElement.style.backgroundColor = this.appAddClass;
   }
 
+  // @HostBinding()
   @HostListener('mouseenter')
   onMouseEnter(){
     this.el.nativeElement.classList.add('delete');
