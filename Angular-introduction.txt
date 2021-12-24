@@ -1,0 +1,111 @@
+Angular
+_______________
+
+
+Angular is a framework for developing web application and 
+mobile applications. It is developed by Google Team.
+
+* We use typescript scriptiong lagunage to write the code in 
+angular framewrok
+* This is a Component based promming framwork
+* Angular follows three types of design pattern
+
+1. MVVM
+2. Moduler
+3. Singleton
+
+* Current version of angular is Agular@13.1.3
+
+For mobile app development we use third party plateforms
+1. Cordova
+2. IONIC Framwork-> This runs on top of Angulak Framwork
+
+
+Design Pattern:
+1. MVVM -> Model-view -> view Model
+
+
+Framework = Plateform + Runtime(Node js)
+
+
+In React-> 
+
+For http call->  Axios
+State managemnet->  Redux
+UI Library-> Third party
+---- Promises
+it uses the JS
+
+
+In Angular->  
+
+1. It has its own Runtime environment
+2. Its has built in CLI for project manipulation
+3. For http calls--->  HttpCliendModule
+4. UI Library-> Angular Material
+5. State management-> NGRX
+6. Asynchronous->  RXJS
+7. Observables
+8. It use Typescript
+
+
+
+Angular Features-> 
+___________________
+
+1. It uses the TypeScript language
+2. Component based programming
+3. Modeuler programming
+4. Data binding ->
+
+* Interpollation
+* Property Binding
+* Two way data bindings
+* Event Binding
+
+5. SPA Features 
+6. Strong routing concept
+7. Cross plateform 
+8. It has its own built in features like
+
+Component
+Data bindings
+Directive
+Pipes
+Modules
+Services
+HttpClient
+
+Angular Installation
+_____________________
+
+1. Intall Node js from https://www.nodejs.org
+2. Along with node npm will get installed
+
+We can check Node and MPM form terminal
+
+command form node -> node --version
+command for npm -> npm --version
+
+If node and npm is ready the we can start intallation of 
+Angular framework
+
+
+3. Useing npm to install angular cli
+
+command---> npm install -g @angular/cli
+
+Cli check---> ng --version
+
+4. To create new Angular App
+
+use the command->>
+
+ng new project_name
+
+5. Once project is created after that
+we can use command
+
+ng serve / ng s
+
+to start the application in browser
