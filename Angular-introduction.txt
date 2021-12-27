@@ -109,3 +109,10 @@ we can use command
 ng serve / ng s
 
 to start the application in browser
+
+
+* Website for download visual studio code
+https://code.visualstudio.com/download
+
+* Github link for code
+https://github.com/vkpindia/js-angular-training
