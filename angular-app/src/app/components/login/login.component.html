@@ -1,0 +1,45 @@
+<header>
+   <div class="header">
+    <h2>Login Form</h2>
+   </div>
+</header>
+<div class="login-container">
+  <table>
+    <tr>
+      <td>
+        <div class="form-group">
+          <label for="text1">User Name</label>
+        </div>
+      </td>
+      <td>
+        <div class="form-group">
+          <input type="text" id="text1" [(ngModel)]="username" class="form-control">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="form-group">
+          <label for="text2">Password</label>
+        </div>
+      </td>
+      <td>
+        <div class="form-group">
+          <input type="password" id="text2" [(ngModel)]="password" class="form-control">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class="form-group">
+          <button class="btn-primary" (click)="login(username, password)">Submit</button>
+        </div>
+      </td>
+    </tr>
+    <tr *ngIf="message">
+      <td>
+         <h3><span style="color: green;">SUCCESS</span>: {{message}}</h3>
+      </td>
+    </tr>
+  </table>
+</div>
