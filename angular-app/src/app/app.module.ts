@@ -17,6 +17,8 @@ import { SearchPipe } from './pipes/search.pipe';
 import { ItemsComponent } from './components/items/items.component';
 import { AddClassDirective } from './directives/add-class.directive';
 import { BgColorDirective } from './directives/bg-color.directive';
+import { DemoService } from './services/demo.service';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { BgColorDirective } from './directives/bg-color.directive';
     SearchPipe,
     ItemsComponent,
     AddClassDirective,
-    BgColorDirective
+    BgColorDirective,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

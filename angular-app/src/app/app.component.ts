@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { DemoService } from './services/demo.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+
 })
 
 export class AppComponent {
@@ -20,6 +22,8 @@ export class AppComponent {
   componentType = 1;
 
   courseList: string[] = ['HTML5', 'JQuery', 'Angular JS', 'Angular13', 'SCSS'];
+
+  // constructor(private ms: DemoService){}
 
   displayCourseList(): void {
 
