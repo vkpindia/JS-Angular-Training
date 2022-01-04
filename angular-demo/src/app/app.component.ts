@@ -1,3 +1,4 @@
+import { ViewEncapsulation } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { studentData } from './enum/stidudent-record.enum';
 import { EmployeeT } from './models/employee.model';
