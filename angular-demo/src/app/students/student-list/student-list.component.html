@@ -1,0 +1,25 @@
+<div>
+  <h1>Students Record</h1>
+  <table style="width: 100%;" border="1" [cellPadding]="10" [cellSpacing]="0">
+    <thead>
+      <tr>
+        <th>NAME</th>
+        <th>CITY</th>
+        <th>COUNTRY</th>
+        <th>GENDER</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of slicedStudentData">
+        <td>{{student.Name}}</td>
+        <td>{{student.City}}</td>
+        <td>{{student.Country}}</td>
+        <td>{{student.gender}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <a (click)="previous()" href="javascript:;">Previous</a>&nbsp;&nbsp;
+  <a (click)="next()" href="javascript:;">Next</a>
+</div>
