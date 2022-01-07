@@ -11,6 +11,7 @@ import { DemoService } from './services/demo.service';
 export class AppComponent {
 
   title = 'Angular Training';
+  showLogin = true;
 
   sid = 1024;
   sname = 'Smith';
@@ -27,5 +28,9 @@ export class AppComponent {
 
   displayCourseList(): void {
 
+  }
+
+  showLoginPage(){
+    this.showLogin = !this.showLogin;
   }
 }

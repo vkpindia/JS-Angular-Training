@@ -1,0 +1,11 @@
+<form #ngUserForm="ngForm" (ngSubmit)="saveData(ngUserForm)">
+  <label for="firstName">First Name</label>
+  <input type="text" [(ngModel)]="formData.firstName" name="firstName" required>
+  <label for="lastName"> Last Name</label>
+  <input type="text" [(ngModel)]="formData.lastName" name="lastName" required>
+  <label for="gender">Gender</label>
+  <input type="radio" value="male" [(ngModel)]="formData.gender" name="gender" required> Male
+  <input type="radio" value="female" [(ngModel)]="formData.gender" name="gender" required> Female
+
+  <button type="submit">Submit Data</button>
+</form>

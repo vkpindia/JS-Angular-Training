@@ -19,6 +19,8 @@ import { AddClassDirective } from './directives/add-class.directive';
 import { BgColorDirective } from './directives/bg-color.directive';
 import { DemoService } from './services/demo.service';
 import { LoginComponent } from './components/login/login.component';
+import { UserComponent } from './components/user/user.component';
+import { FormsDemoComponent } from './components/forms-demo/forms-demo.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { LoginComponent } from './components/login/login.component';
     ItemsComponent,
     AddClassDirective,
     BgColorDirective,
-    LoginComponent
+    LoginComponent,
+    UserComponent,
+    FormsDemoComponent
   ],
   imports: [
     BrowserModule,

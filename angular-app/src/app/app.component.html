@@ -71,5 +71,9 @@
   </ng-container>
 </ng-container> -->
 
-<!-- <app-items></app-items> -->
-<app-login></app-login>
+<app-items *ngIf="!showLogin"></app-items>
+<app-login *ngIf="showLogin"></app-login>
+
+<button (click)="showLoginPage()">Show login</button>
+<br><br>
+<app-forms-demo></app-forms-demo>
