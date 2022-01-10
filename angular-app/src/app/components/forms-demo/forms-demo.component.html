@@ -1,11 +1,37 @@
-<form #ngUserForm="ngForm" (ngSubmit)="saveData(ngUserForm)">
-  <label for="firstName">First Name</label>
-  <input type="text" [(ngModel)]="formData.firstName" name="firstName" required>
-  <label for="lastName"> Last Name</label>
-  <input type="text" [(ngModel)]="formData.lastName" name="lastName" required>
-  <label for="gender">Gender</label>
-  <input type="radio" value="male" [(ngModel)]="formData.gender" name="gender" required> Male
-  <input type="radio" value="female" [(ngModel)]="formData.gender" name="gender" required> Female
+<form #ngUserForm="ngForm" (ngSubmit)="ngUserForm.submitted && saveData(ngUserForm)" novalidate>
+  <div>
+    <label for="firstName">First Name</label>
+    <input type="text" [(ngModel)]="formData.firstName" #firstName="ngModel" name="firstName" minlength="3" maxlength="8" required>
+    <div *ngIf="ngUserForm.submitted && firstName.invalid || firstName.touched">
+      <span  class="errors" *ngIf="firstName.hasError('required')">Please enter first name.</span>
+      <span  class="errors" *ngIf="firstName.hasError('minlength')">Please enter minimim 3 characters.</span>
+      <span  class="errors" *ngIf="firstName.hasError('maxlength')">Please enter minimim 16 characters only.</span>
+    </div>
+  </div><br>
+  <div>
+    <label for="lastName"> Last Name</label>
+    <input type="text" [(ngModel)]="formData.lastName" #lastName="ngModel" name="lastName" required>
+    <div *ngIf="ngUserForm.submitted && lastName.invalid || lastName.touched">
+      <span  class="errors" *ngIf="lastName.hasError('required')">Please enter last name.</span>
+    </div>
+  </div>
+  <div>
+    <label for="age"> Age</label>
+    <input type="number" [(ngModel)]="formData.age" #age="ngModel" min="18" max="72" name="age" required>
+    <div *ngIf="ngUserForm.submitted && age.invalid || age.touched">
+      <span  class="errors" *ngIf="age.hasError('required')">Age is required.</span>
+      <span  class="errors" *ngIf="age.hasError('min')">Minimum age should be 18.</span>
+      <span  class="errors" *ngIf="age.hasError('max')">Maximum age should not be greater than 72.</span>
+    </div>
+  </div>
+  <div><br>
+    <label for="gender">Gender</label><br>
+    <input type="radio" value="male" [(ngModel)]="formData.gender" #gender="ngModel" name="gender" required> Male <br>
+    <input type="radio" value="female" [(ngModel)]="formData.gender" #gender="ngModel" name="gender" required> Female
+    <div *ngIf="ngUserForm.submitted && gender.invalid || gender.touched">
+      <span  class="errors" *ngIf="gender.hasError('required')">Please enter last name.</span>
+    </div>
+  </div>
 
   <button type="submit">Submit Data</button>
 </form>

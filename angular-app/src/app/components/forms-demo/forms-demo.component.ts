@@ -11,7 +11,8 @@ export class FormsDemoComponent implements OnInit {
   formData: any = {
     firstName: '',
     lastName: '',
-    gender: 'male'
+    gender: 'male',
+    age: ''
   };
 
   constructor() { }
@@ -20,7 +21,14 @@ export class FormsDemoComponent implements OnInit {
   }
 
   saveData(userForm: NgForm){
-  console.log('userForm', userForm.value);
+    if(userForm.invalid){
+      console.log('userForm.invalid', userForm.invalid);
+      return;
+    } else {
+      console.log('userForm', userForm.value);
+    }
   }
 
 }
+
+

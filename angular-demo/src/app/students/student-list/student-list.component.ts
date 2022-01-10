@@ -60,11 +60,24 @@ export class StudentListComponent implements OnInit {
   }
 
   previous(){
-
+    if(this.firstIndex==0){
+      this.lastIndex= this.studentList.length-1;
+      this.firstIndex = this.lastIndex-2;
+    } else {
+      this.firstIndex = this.firstIndex-2;
+      this.lastIndex = this.lastIndex-2;
+    }
+    this.slicedStudentData = this.studentList.slice(this.firstIndex, this.lastIndex);
   }
 
   next(){
-    this.slicedStudentData = this.studentList.slice(this.firstIndex+2, this.lastIndex+2);
+    this.firstIndex = this.firstIndex+2;
+    this.lastIndex = this.lastIndex+2;
+    if(this.studentList.length<this.firstIndex){
+      this.firstIndex = 0;
+      this.lastIndex = 2;
+    }
+    this.slicedStudentData = this.studentList.slice(this.firstIndex, this.lastIndex);
   }
 
 }

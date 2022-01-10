@@ -1,0 +1,15 @@
+<div>
+  <div class="image-container">
+    <div>
+      <span>Do you want to hide product details?</span>
+      <input type="checkbox" [(ngModel)]="showProduct" (change)="onChange()">
+    </div>
+    <img [src]="imgSOurce" alt="Image not found">
+  </div>
+  <div class="product-info"  *ngIf="!showProduct"><!-- *ngIf="!showProduct" [hidden]="showProduct"-->
+    <p>Product Name: {{productDetails.name}}</p>
+    <p>Product Brand: {{productDetails.brand}}</p>
+    <p>Product Price: {{productDetails.price}}</p>
+    <p>Product Quantity: {{productDetails.qty}}</p>
+  </div>
+</div>
