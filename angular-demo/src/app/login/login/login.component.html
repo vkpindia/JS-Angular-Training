@@ -1,0 +1,25 @@
+
+<div class="login-container">
+  <table  *ngIf="!showMessage">
+    <tr>
+      <td><label for="username"></label>Username:</td>
+      <td><input type="text" [(ngModel)]="username" name="username"></td>
+    </tr>
+    <tr>
+      <td><label for="pas"></label>Password:</td>
+      <td><input type="password" [(ngModel)]="password" name="pas"></td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <button (click)="login()">Login</button>
+      </td>
+    </tr>
+
+  </table>
+
+  <div *ngIf="showMessage">
+    <p>{{welcomeMessage}}</p>
+  </div>
+</div>
+

@@ -10,7 +10,7 @@ import { EmployeeT } from './models/employee.model';
 })
 
 export class AppComponent implements OnInit{
-  title = 'Data Bindings In Angular';
+  title = 'Event Binding In Angular';
   public sid: number = 0;
   public sname: string = '';
   public course: string = '';

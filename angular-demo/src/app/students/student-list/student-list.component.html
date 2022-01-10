@@ -10,11 +10,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let student of slicedStudentData">
+      <tr *ngFor="let student of slicedStudentData; let i = index">
         <td>{{student.Name}}</td>
         <td>{{student.City}}</td>
         <td>{{student.Country}}</td>
         <td>{{student.gender}}</td>
+
+       <!--  <td>
+           <button (click)="editEmployee(student)">Edit</button>
+           <button (click)="delteEmployee(i)">Delete</button>
+        </td> -->
       </tr>
     </tbody>
   </table>
