@@ -1,0 +1,60 @@
+1. Typescript is strongly typed language
+
+2. types are used by typescript compiler to checking and enabling 
+developrs to check correct values are passed to a variable
+
+3. We can specify the types(Data type) of the variable at the 
+time of creating varibales in the program
+
+* Typescript supports following predefined types:
+
+Number
+String
+Boolean
+Date
+Object
+Array
+Tupple
+Void
+Unknown
+Enum
+any
+
+
+
+Basically Two type of data type avaialable:
+
+1. Premitive types -> Number, String, Void, Unknown etc. 
+2. Non-premitive types -> Array, Tupple, Object etc.
+
+
+Declaring the variables in Functional Typescript Programming:
+
+--> Every programming languages supports variables in order to store
+and access the values
+
+--> Typescript also supports varibales to process the data
+
+--> We use let, var and const keywords to declare the variable in 
+functional TypeScript programming
+
+
+
+Syntax:
+
+keywords_name variable_name: data_type;
+
+keywords_name variable_name: data_type = value;
+
+
+Example: 
+
+var sid: number;
+let sname: string;
+const age = 20;
+
+
+Note: If you will not declare variable without type in TS then the 
+the compiler consider as 'any' type
+
+'any' type variable can store all the types of data.
