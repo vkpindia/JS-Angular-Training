@@ -58,3 +58,15 @@ Note: If you will not declare variable without type in TS then the
 the compiler consider as 'any' type
 
 'any' type variable can store all the types of data.
+
+
+
+var--> 'var' is used to declare variables global scopped and function scopped.
+ also we can redeclare and reinitialise the variables which is created by 'var' keyword
+
+let--> 'let' is used to declare variables local scopped and block scopped.
+ also we can not redeclare but reinitialize the variables which is created by 'let' keyword
+
+const--> 'const' varibales must be initialize at the time of declaration. and we can change
+the value later. It  is used to declare variables local scopped and block scopped also for constant data.
+we can not redeclare and also can not reinitialize the variables which is created by 'const' keyword 

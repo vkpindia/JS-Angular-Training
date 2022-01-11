@@ -11,3 +11,5 @@ console.log('sname', sname);
 console.log('course', course);
 console.log('isFeePaid', isFeePaid);
 console.log('duration', duration);
+
+console.log('window:->>', window);
