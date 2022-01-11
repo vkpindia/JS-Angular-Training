@@ -8,7 +8,7 @@ import { StudentComponent } from './student/student.component';
 import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './components/services/services.component';
 import { DataBindingComponent } from './components/data-binding/data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NexPrevComponent } from './components/nex-prev/nex-prev.component';
 import { PrefixPipe } from './pipes/prefix.pipe';
 import { GenderPipe } from './pipes/gender.pipe';
@@ -21,6 +21,7 @@ import { DemoService } from './services/demo.service';
 import { LoginComponent } from './components/login/login.component';
 import { UserComponent } from './components/user/user.component';
 import { FormsDemoComponent } from './components/forms-demo/forms-demo.component';
+import { ReactiveFormDemoComponent } from './components/reactive-form-demo/reactive-form-demo.component';
 
 @NgModule({
   declarations: [
@@ -41,12 +42,14 @@ import { FormsDemoComponent } from './components/forms-demo/forms-demo.component
     BgColorDirective,
     LoginComponent,
     UserComponent,
-    FormsDemoComponent
+    FormsDemoComponent,
+    ReactiveFormDemoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

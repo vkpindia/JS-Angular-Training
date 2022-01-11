@@ -1,0 +1,37 @@
+<form [formGroup]="userForm" (ngSubmit)="saveData()">
+  <div>
+    <label for="firstName">First Name</label>
+    <input type="text" formControlName="firstName">
+    <div *ngIf="formControl['firstName'].invalid && formControl['firstName'].touched || formControl['firstName'].dirty">
+      <span  class="errors" *ngIf="formControl['firstName'].hasError('required')">Please enter first name.</span>
+      <span  class="errors" *ngIf="formControl['firstName'].hasError('minlength')">Please enter minimim 3 characters.</span>
+      <span  class="errors" *ngIf="formControl['firstName'].hasError('maxlength')">Please enter maximum 16 characters only.</span>
+    </div>
+  </div><br>
+  <div>
+    <label for="lastName"> Last Name</label>
+    <input type="text" formControlName="lastName">
+    <div *ngIf="formControl['lastName'].invalid && formControl['lastName'].touched || formControl['lastName'].dirty">
+      <span  class="errors" *ngIf="formControl['lastName'].hasError('required')">Please enter last name.</span>
+      <span  class="errors" *ngIf="formControl['lastName'].hasError('minlength')">Please enter minimim 3 characters.</span>
+      <span  class="errors" *ngIf="formControl['lastName'].hasError('maxlength')">Please enter maximum 16 characters only.</span>
+    </div>
+  </div>
+  <div>
+    <label for="age"> Age</label>
+    <input type="number" formControlName="age">
+    <div *ngIf="formControl['age'].invalid && formControl['age'].touched || formControl['age'].dirty">
+      <span  class="errors" *ngIf="formControl['age'].hasError('required')">Please enter first name.</span>
+    </div>
+  </div>
+  <div><br>
+    <label for="gender">Gender</label><br>
+    <input type="radio" formControlName="gender" value="male"> Male <br>
+    <input type="radio" formControlName="gender" value="female"> Female
+    <!-- <div *ngIf="ngUserForm.submitted && gender.invalid || gender.touched">
+      <span  class="errors" *ngIf="gender.hasError('required')">Please enter last name.</span>
+    </div> -->
+  </div>
+
+  <button type="submit">Submit Data</button>
+</form>
