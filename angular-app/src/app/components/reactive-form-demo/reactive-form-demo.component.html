@@ -32,6 +32,55 @@
       <span  class="errors" *ngIf="gender.hasError('required')">Please enter last name.</span>
     </div> -->
   </div>
+  <div formGroupName="address">
+    <div>
+      <label for="addressLine1">Address Line-1</label>
+      <input type="text" formControlName="addressLine1">
+      <div *ngIf="formAddressControl['addressLine1'].invalid && formAddressControl['addressLine1'].touched || formAddressControl['addressLine1'].dirty">
+        <span  class="errors" *ngIf="formAddressControl['addressLine1'].hasError('required')">Please enter addressLine1.</span>
+      </div>
+    </div><br>
+    <div>
+      <label for="addressLine2">Address Line-2</label>
+      <input type="text" formControlName="addressLine2">
+    </div><br>
+    <div>
+      <label for="landmark">Landmark</label>
+      <input type="text" formControlName="landmark">
+      <div *ngIf="formAddressControl['landmark'].invalid && formAddressControl['landmark'].touched || formAddressControl['landmark'].dirty">
+        <span  class="errors" *ngIf="formAddressControl['landmark'].hasError('required')">Please enter landmark.</span>
+      </div>
+    </div><br>
+    <div>
+      <label for="state">State</label>
+      <select formControlName="state">
+        <option value="">Select State</option>
+        <option value="20">Mirzapur</option>
+        <option value="21">Prayagraj</option>
+      </select>
+      <div *ngIf="formAddressControl['state'].invalid && formAddressControl['state'].touched || formAddressControl['state'].dirty">
+        <span  class="errors" *ngIf="formAddressControl['state'].hasError('required')">Please select state.</span>
+      </div>
+    </div><br>
+    <div>
+      <label for="city">City</label>
+      <select formControlName="city">
+        <option value="">Select City</option>
+        <option value="20">Mirzapur</option>
+        <option value="21">Prayagraj</option>
+      </select>
+      <div *ngIf="formAddressControl['city'].invalid && formAddressControl['city'].touched || formAddressControl['city'].dirty">
+        <span  class="errors" *ngIf="formAddressControl['city'].hasError('required')">Please select City.</span>
+      </div>
+    </div><br>
+    <div>
+      <label for="postalcode">Postal Code</label>
+      <input type="text" formControlName="postalCode">
+      <div *ngIf="formAddressControl['postalCode'].invalid && formAddressControl['postalCode'].touched || formAddressControl['postalCode'].dirty">
+        <span  class="errors" *ngIf="formAddressControl['postalCode'].hasError('required')">Please enter postal code.</span>
+      </div>
+    </div><br>
+  </div>
 
   <button type="submit">Submit Data</button>
 </form>
