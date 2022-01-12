@@ -1,0 +1,21 @@
+Syntax: In functional Typescript programming 
+
+1. Non Parameterzied Function
+
+function fn_name(): return-Type{
+    // function body
+}
+
+
+2. Parameterzied Function
+
+function fn_name(pram1: data_type, param2: data_type,...paramN: data_type): return-Type{
+    // function body
+}
+
+
+
+* By default every function returns undefined and the return type of the method 
+would be void.
+* The parameters and return types are optional in function definition
+
