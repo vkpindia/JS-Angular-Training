@@ -11,10 +11,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let student of slicedStudentData; let i = index">
-        <td>{{student.Name}}</td>
-        <td>{{student.City}}</td>
-        <td>{{student.Country}}</td>
-        <td>{{student.gender}}</td>
+        <td *ngFor="let item of student | keyvalue : order">{{item.value}}</td>
 
        <!--  <td>
            <button (click)="editEmployee(student)">Edit</button>

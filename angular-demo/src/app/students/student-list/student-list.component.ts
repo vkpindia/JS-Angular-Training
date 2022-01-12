@@ -1,3 +1,4 @@
+import { KeyValue } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,8 +10,20 @@ export class StudentListComponent implements OnInit {
 
   firstIndex: number = 0;
   lastIndex: number = 2;
+  order = (a: KeyValue<number, string>, b:KeyValue<number, string>): number =>{
+    return 0;
+  };
+  ascOrder = (a: KeyValue<number, string>, b:KeyValue<number, string>): number =>{
+    return 0;
+  };
+  descOrder = (a: KeyValue<number, string>, b:KeyValue<number, string>): number =>{
+    return 0;
+  };
   public studentList: any[];
   slicedStudentData: any[];
+
+
+
   constructor() {
    this.studentList = this.getStudentList();
    this.slicedStudentData = this.studentList.slice( this.firstIndex, this.lastIndex)
@@ -18,6 +31,7 @@ export class StudentListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 
   getStudentList(): any[]{
     return [
