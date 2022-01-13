@@ -40,9 +40,21 @@
         <span  class="errors" *ngIf="formAddressControl['addressLine1'].hasError('required')">Please enter addressLine1.</span>
       </div>
     </div><br>
-    <div>
-      <label for="addressLine2">Address Line-2</label>
-      <input type="text" formControlName="addressLine2">
+    <div formArrayName="addressLine">
+      <button type="button" (click)="addAddressFild()">Add Address</button><br>
+      <label for="addressLine1">Address Line-2</label>
+      <ng-container *ngFor="let field of addressArray['controls']; let i = index" [formGroupName]='i'>
+        <div>
+          <input type="text" formControlName="addressLine2">
+          <div *ngIf="addressArray['controls'][i]?.get('addressLine2')?.invalid && addressArray['controls'][i]?.get('addressLine2')?.touched || addressArray['controls'][i]?.get('addressLine2')?.dirty">
+            <span  class="errors" *ngIf="addressArray['controls'][i]?.get('addressLine2')?.hasError('required')">Please enter addressLine1.</span>
+          </div>
+        </div>
+        <button type="button" (click)="removeField(i)">remove</button>
+        <br>
+
+      </ng-container>
+
     </div><br>
     <div>
       <label for="landmark">Landmark</label>
