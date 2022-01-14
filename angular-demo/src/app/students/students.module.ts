@@ -6,13 +6,15 @@ import { StudentListComponent } from './student-list/student-list.component';
 import { GallaryComponent } from './gallary/gallary.component';
 import { ProductComponent } from './product/product.component';
 import { FormsModule } from '@angular/forms';
+import { GenderPipe } from '../pipes/gender.pipe';
 
 
 @NgModule({
   declarations: [
     StudentListComponent,
     GallaryComponent,
-    ProductComponent
+    ProductComponent,
+    GenderPipe
   ],
   imports: [
     CommonModule,

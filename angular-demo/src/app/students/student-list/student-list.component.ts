@@ -40,18 +40,20 @@ export class StudentListComponent implements OnInit {
         Name: 'Ana Trujillo Emparedados y helados',
         City: 'México D.F.',
         Country: 'Mexico',
-        gender: 'F'
+        gender: 'F',
+        salary: 20000
       },
       {
         Name: 'Antonio Moreno Taquería',
         City: 'México D.F.',
         Country: 'Mexico',
-        gender: 'F'
+        gender: 'F',
+        salary: 22000
       },
-      { Name: 'Around the Horn', City: 'London', Country: 'UK', gender: 'M' },
-      { Name: "B's Beverages", City: 'London', Country: 'UK', gender: 'M'},
-      { Name: 'Berglunds snabbköp', City: 'Luleå', Country: 'Sweden', gender: 'M' },
-      { Name: 'Blauer See Delikatessen', City: 'Mannheim', Country: 'Germany', gender: 'F' },
+      { Name: 'Around the Horn', City: 'London', Country: 'UK', gender: 'M', salary: 22700 },
+      { Name: "B's Beverages", City: 'London', Country: 'UK', gender: 'M', salary: 22800},
+      { Name: 'Berglunds snabbköp', City: 'Luleå', Country: 'Sweden', gender: 'M', salary: 22008 },
+      { Name: 'Blauer See Delikatessen', City: 'Mannheim', Country: 'Germany', gender: 'F', salary: 22009 },
       { Name: 'Blondel père et fils', City: 'Strasbourg', Country: 'France', gender: 'M' },
       { Name: 'Bólido Comidas preparadas', City: 'Madrid', Country: 'Spain', gender: 'F' },
       { Name: "Bon app'", City: 'Marseille', Country: 'France', gender: 'M' },

@@ -7,7 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeComponent implements OnInit {
 
+  data: any = {
+    0: 'Smith',
+    1: 'Bangalore'
+  };
 
+
+ data1 =  [
+    {
+      key:0,
+      value: "Smith"
+    },
+    {
+      key:1,
+      value: "Bangalore"
+    }
+  ]
   public employeeName = 'Ashok Kumar';
 
   constructor() { }
