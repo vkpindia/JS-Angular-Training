@@ -19,3 +19,9 @@ function fn_name(pram1: data_type, param2: data_type,...paramN: data_type): retu
 would be void.
 * The parameters and return types are optional in function definition
 
+Based On the parameters, there are three more types are available:
+
+
+1. Function with Default Prameter
+2. Fuction with Option parameter
+3. Function with REST parameters

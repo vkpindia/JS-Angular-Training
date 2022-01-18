@@ -1,0 +1,28 @@
+1. About let, var and const keyword.
+
+2. Functions type
+    Function declarartion
+    function expression
+    anonymous function
+    IIFE(Imediately invoked function expression) function
+
+3. Object literal, assignment desctructuring, Array of object
+4. String methods and array methods with examles
+5. map(), forEach(), filter(), reduce(), some(),  every()
+   assign(), keys(), entries()
+
+6. Promises in JS
+7. Async and await
+8. 'this' in JS
+9. Prototype in JS
+10. copy object and cloned object
+11. ES6 new features with example
+12. Es6 new operators
+14. DOM and its manipulation
+15. OOJS(Object Oriented Javascript)
+16. Closures and Hoisting
+17. Event Loop and event listeners
+18. call(), apply() and bind()
+19. Error handling, try, catch, throw and finally
+20. Strict mode
+21. Callback
