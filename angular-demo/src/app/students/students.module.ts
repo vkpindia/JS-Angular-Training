@@ -7,6 +7,8 @@ import { GallaryComponent } from './gallary/gallary.component';
 import { ProductComponent } from './product/product.component';
 import { FormsModule } from '@angular/forms';
 import { GenderPipe } from '../pipes/gender.pipe';
+import { FilterPipe } from '../pipes/filter.pipe';
+import { TitlePrefixPipe } from '../pipes/title-prefix.pipe';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { GenderPipe } from '../pipes/gender.pipe';
     StudentListComponent,
     GallaryComponent,
     ProductComponent,
-    GenderPipe
+    GenderPipe,
+    FilterPipe,
+    TitlePrefixPipe
   ],
   imports: [
     CommonModule,

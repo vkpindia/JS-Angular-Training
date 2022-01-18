@@ -1,4 +1,8 @@
 <div>
+  <div>
+    <label for="search">Search Data</label>
+    <input type="text" [(ngModel)]="searchText">
+  </div>
   <h1>Students Record</h1>
   <table style="width: 100%;" border="1" [cellPadding]="10" [cellSpacing]="0">
     <thead>
@@ -11,11 +15,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let student of slicedStudentData; let i = index">
+      <!-- <tr *ngFor="let student of slicedStudentData; let i = index"> -->
+      <tr *ngFor="let student of  getStudentList() | filter: searchText: 'City'; let i = index">
         <!-- <td *ngFor="let item of student | keyvalue : order">{{item.value}}</td> -->
 
         <td>
-          {{student.Name | titlecase}}
+          {{student.Name | titlecase | titlePrefix: student.gender}}
         </td>
         <!-- <td>
           {{student.Name | titlecase | uppercase | lowercase}}

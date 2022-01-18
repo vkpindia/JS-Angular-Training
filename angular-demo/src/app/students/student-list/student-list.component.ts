@@ -10,6 +10,7 @@ export class StudentListComponent implements OnInit {
 
   firstIndex: number = 0;
   lastIndex: number = 2;
+  searchText: string = '';
   order = (a: KeyValue<number, string>, b:KeyValue<number, string>): number =>{
     return 0;
   };

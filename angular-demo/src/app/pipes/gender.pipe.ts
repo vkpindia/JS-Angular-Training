@@ -7,9 +7,9 @@ export class GenderPipe implements PipeTransform {
 
   transform(value: string): string {
     let formatedData = '';
-    if(value.toLocaleLowerCase() =='m'){
+    if(value =='M'){
       formatedData = 'Male';
-    } else if(value.toLocaleLowerCase() =='f'){
+    } else if(value =='F'){
       formatedData = 'Female';
     }
     return formatedData;
