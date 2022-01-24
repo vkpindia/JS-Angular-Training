@@ -16,31 +16,40 @@
     </thead>
     <tbody>
       <!-- <tr *ngFor="let student of slicedStudentData; let i = index"> -->
-      <tr *ngFor="let student of  getStudentList() | filter: searchText: 'City'; let i = index">
-        <!-- <td *ngFor="let item of student | keyvalue : order">{{item.value}}</td> -->
+        <ng-container *ngFor="let student of  getStudentList() | filter: searchText: 'City'; let i = index">
+          <tr>
+            <!-- <td *ngFor="let item of student | keyvalue : order">{{item.value}}</td> -->
 
-        <td>
-          {{student.Name | titlecase | titlePrefix: student.gender}}
-        </td>
-        <!-- <td>
-          {{student.Name | titlecase | uppercase | lowercase}}
-        </td> -->
-        <td>
-          {{student.City | uppercase}}
-        </td>
-        <td>
-          {{student.Country | lowercase}}
-        </td>
-        <td>
-          {{student.gender | gender}}
-        </td>
-        <td>
-          <!-- {{student.salary | currency: 'EUR'}}
-          {{student.salary | currency: 'USD'}} -->
-          <!-- {{student.salary | currency: 'INR'}} -->
-          {{student.salary | number: '0.2'}}
-        </td>
-      </tr>
+            <td>
+              <span>
+                {{student.Name | titlecase | titlePrefix: student.gender}}
+              </span>
+            </td>
+
+            <!-- <td>
+              {{student.Name | titlecase | uppercase | lowercase}}
+            </td> -->
+            <td>
+              {{student.City | uppercase}}
+            </td>
+            <td>
+              {{student.Country | lowercase}}
+            </td>
+            <td>
+              <span *ngIf="student.gender; else dash">
+                {{student.gender | gender}}
+              </span>
+            </td>
+            <td>
+              <!-- {{student.salary | currency: 'EUR'}}
+              {{student.salary | currency: 'USD'}} -->
+              <!-- {{student.salary | currency: 'INR'}} -->
+              <span *ngIf="student.salary; else dash">
+                {{student.salary | number: '0.2'}}
+              </span>
+            </td>
+          </tr>
+        </ng-container>
     </tbody>
   </table>
 </div>
@@ -48,3 +57,7 @@
   <a (click)="previous()" href="javascript:;">Previous</a>&nbsp;&nbsp;
   <a (click)="next()" href="javascript:;">Next</a>
 </div>
+
+<ng-template #dash>
+  <span>---</span>
+</ng-template>

@@ -1,0 +1,41 @@
+Directive in Angular
+____________________
+
+Directives are the classes in Angular Framework that add
+additional behaviour to the html elements or Angular components
+
+
+1. Built in Directive -->  These directive already developed in Angular
+
+2. Custom Directive --> As per requirement we can develop
+
+
+There are different types of directives:
+
+1. Component Directive:
+
+ex: Component selectors, ng-template, ng-container, ng-content,
+router-outlet etc..
+
+2. Attribute diretive: The directive which changes the apearance or behaviour of an element, compoenent, other drective
+
+ex:
+ngStyle:  adds and removes a set of HTML styles
+gClass: adds and removes a set of css classes.
+ngModel: add two-way data bindings to forms input elements
+
+
+
+3. Structural Directives: Changes the DOM layout by adding and removing DOM elements
+
+Ex:
+*ngIf: Conditionally create or disposes the elements from the  DOM tree
+
+*ngFor: it repeat the node for each element in a list
+
+ngSwitch: A set of directives that swtch among alternative views conditionaly
+
+
+
+
+
