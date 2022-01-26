@@ -11,6 +11,8 @@ export class StudentListComponent implements OnInit {
   firstIndex: number = 0;
   lastIndex: number = 2;
   searchText: string = '';
+  showColumn: boolean = true;
+  buttonLabel: string = 'Hide Column';
   order = (a: KeyValue<number, string>, b:KeyValue<number, string>): number =>{
     return 0;
   };
@@ -95,6 +97,16 @@ export class StudentListComponent implements OnInit {
       this.lastIndex = 2;
     }
     this.slicedStudentData = this.studentList.slice(this.firstIndex, this.lastIndex);
+  }
+
+  hideColumn(){
+    if (!this.showColumn) {
+      this.showColumn = true;
+      this.buttonLabel = 'Hide Column';
+      return;
+    }
+    this.showColumn = false;
+    this.buttonLabel = 'Show Column';
   }
 
 }
