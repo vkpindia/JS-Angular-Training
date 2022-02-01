@@ -25,3 +25,31 @@ Based On the parameters, there are three more types are available:
 1. Function with Default Prameter
 2. Fuction with Option parameter
 3. Function with REST parameters
+
+Array Methods:
+______________
+
+  * push()
+  * pop()
+  * concat()
+  * join()
+  * shift()
+  * unshift()
+  * slice()
+  * sort()
+  * splice()
+  * reverse()
+  * toLocaleString()
+  * toString()
+  * valueOf()
+  * indexOf()
+  * find()
+  * findIndex()
+  * lastIndexOf()
+  * map()
+  * forEach()
+  * filter()
+  * reduce()
+  * some()
+  * every()
+  * includes()

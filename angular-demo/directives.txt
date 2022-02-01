@@ -35,6 +35,8 @@ Ex:
 
 ngSwitch: A set of directives that swtch among alternative views conditionaly
 
+*ngSwitchCase
+
 
 
 

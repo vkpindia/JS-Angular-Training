@@ -1,4 +1,5 @@
 import { KeyValue } from '@angular/common';
+import { Statement } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -107,6 +108,14 @@ export class StudentListComponent implements OnInit {
     }
     this.showColumn = false;
     this.buttonLabel = 'Show Column';
+  }
+
+  addClass(i: number){
+    if(i%2==0){
+      return 'light-green';
+    } else {
+      return 'light-red';
+    }
   }
 
 }

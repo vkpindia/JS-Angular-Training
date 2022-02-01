@@ -1,8 +1,8 @@
 <div>
-  <div>
-    <label for="search">Search Data</label>
-    <input type="text" [(ngModel)]="searchText">
-  </div>
+    <div>
+      <label for="search">Search Data</label>
+      <input type="text" [(ngModel)]="searchText">
+    </div>
   <h1>Students Record</h1>
   <table style="width: 100%;" border="1" [cellPadding]="10" [cellSpacing]="0">
     <thead>
@@ -19,41 +19,52 @@
     <tbody>
       <!-- <tr *ngFor="let student of slicedStudentData; let i = index"> -->
         <ng-container>
-          <tr *ngFor="let student of  getStudentList() | filter: searchText: 'City'; let i = index">
-            <!-- <td *ngFor="let item of student | keyvalue : order">{{item.value}}</td> -->
+          <ng-container  *ngIf="getStudentList() && getStudentList().length">
+            <!-- [ngClass]="addClass(i)" -->
+            <!-- [ngClass]="i%2==0?'light-green': 'light-red'" -->
+            <!-- [ngClass]="{'light-green':i%2==0, 'light-red': i%2!=0, 'bg-red': !getStudentList().length}" -->
+              <tr [ngStyle]="{'background-color':i%2==0? '#ffc7c7': '#c7ffec'}" *ngFor="let student of getStudentList() | filter: searchText: 'City'; let i = index">
+                <!-- <td *ngFor="let item of student | keyvalue : order">{{item.value}}</td> -->
+                <td>
+                  <span>
+                    {{student.Name | titlecase | titlePrefix: student.gender}}
+                  </span>
+                </td>
 
-            <td>
-              <span>
-                {{student.Name | titlecase | titlePrefix: student.gender}}
-              </span>
-            </td>
-
-            <!-- <td>
-              {{student.Name | titlecase | uppercase | lowercase}}
-            </td> -->
-            <td>
-              {{student.City | uppercase}}
-            </td>
-            <td>
-              {{student.Country | lowercase}}
-            </td>
-            <ng-container *ngIf="showColumn">
-              <td>
-                <span *ngIf="student.gender; else dash">
-                  {{student.gender | gender}}
-                </span>
-              </td>
-              <td>
-                <!-- {{student.salary | currency: 'EUR'}}
-                {{student.salary | currency: 'USD'}} -->
-                <!-- {{student.salary | currency: 'INR'}} -->
-                <span *ngIf="student.salary; else dash">
-                  {{student.salary | number: '0.2'}}
-                </span>
-              </td>
-            </ng-container>
-          </tr>
+                <!-- <td>
+                  {{student.Name | titlecase | uppercase | lowercase}}
+                </td> -->
+                <td>
+                  {{student.City | uppercase}}
+                </td>
+                <td>
+                  {{student.Country | lowercase}}
+                </td>
+                <ng-container *ngIf="showColumn">
+                  <td>
+                    <span *ngIf="student.gender; else dash">
+                      {{student.gender | gender}}
+                      <ng-container *ngTemplateOutlet="genderRemark; context: {student}"><!-- {student: student} --></ng-container>
+                    </span>
+                  </td>
+                  <td>
+                    <!-- {{student.salary | currency: 'EUR'}}
+                    {{student.salary | currency: 'USD'}} -->
+                    <!-- {{student.salary | currency: 'INR'}} -->
+                    <span *ngIf="student.salary; else dash">
+                      {{student.salary | number: '0.2'}}
+                    </span>
+                  </td>
+                </ng-container>
+              </tr>
+          </ng-container>
         </ng-container>
+
+        <tr *ngIf="getStudentList() && getStudentList().length<1">
+          <td colspan="5">
+            No records found
+          </td>
+        </tr>
     </tbody>
   </table>
 </div>
@@ -66,3 +77,24 @@
 <ng-template #dash>
   <span>---</span>
 </ng-template>
+
+
+<ng-template #genderRemark let-student="student">
+  <ng-container [ngSwitch]="student?.gender">
+    <ng-container *ngSwitchCase="'M'">
+      <span>Priority</span>
+    </ng-container>
+    <ng-container *ngSwitchCase="'F'">
+       <span>Not Priority</span>
+    </ng-container>
+    <ng-container *ngSwitchCase="'others'">
+      <span>Not Considerable</span>
+    </ng-container>
+    <ng-container *ngSwitchDefault="">
+
+    </ng-container>
+  </ng-container>
+</ng-template>
+
+
+

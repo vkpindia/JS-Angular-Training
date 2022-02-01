@@ -1,0 +1,22 @@
+<h1>
+  ng-template demonstartion
+</h1><hr>
+
+<ul>
+  <li *ngFor="let lession of lessions">
+    <ng-container *ngIf="lession.name == 'Lession1'">
+      {{lession.name}}
+    </ng-container>
+    <ng-container *ngIf="lession.name != 'Lession1'">
+       <ng-container *ngTemplateOutlet="contents; context:{lessions: lessions}"></ng-container>
+    </ng-container>
+
+  </li>
+</ul>
+
+
+<ng-template #contents let-lession="lessions">
+    <p *ngFor="let ls of lession">{{ls.name}} contents</p>
+</ng-template>
+
+

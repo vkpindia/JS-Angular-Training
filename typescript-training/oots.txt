@@ -1,4 +1,81 @@
-Object Oriented Programming in TypeScript
+Object Oriented Programming in TypeScript:
 __________________________________________
 
-1. 
+1. Object oriented programming(OOP) Systemsrefers to type 
+of programming in which programmers defines the data and
+its operartions
+
+2. In OOP, class defines variables(fields) and its functions
+(methods) in single unite.
+
+3. We can create object by using class
+
+
+What are the principles of OOPS?:
+_________________________________
+
+1. Every object oriented programming languages should support
+the following fundamental principles=>
+
+* Abstraction ==> Object
+* Inheritance ==> Reusibility
+* Polymorphism ==> Overloading and over-riding
+* Encapsulation ==> class
+
+
+2. Example of OOP languages:
+
+c++, JAVA, c#, TypeScript, Python etc.
+
+
+What are the advantage of OOP:
+_________________________________
+
+Modularity
+Reusibility
+Data Security
+Data Binding
+
+
+
+Implementing OOP in TypeScript:
+_________________________________
+
+-> TypeScript Also is a OOP language
+-> TS supports all the OOP concepts like classes, Object
+constrcutor, Inheritance and Interface etc.
+
+
+Creating a class in TS:
+_________________________________
+
+-> class keyword is used to declar a class
+
+Syntax:
+
+class class_name {
+   // we wraps fields(variables) and methods 
+}
+
+Note: class names are starts with capital letters and next word also will start with capital letter
+
+Exa:
+
+class Student {
+    public sid: number = 1025;
+    public sname: tsring = 'scott';
+
+    printData(): void {
+        // Method body
+    }
+}
+
+
+Rules that we should follow in TS OOP:
+__________________________________________
+
+1. Don't use var, let or const keywords to declare 
+class properties(variables, fields)
+2. Don't function keywords to declare methods in class
+3. use 'this' keyword to access properties in the class.
+4. Each member in class is declared as public by default.

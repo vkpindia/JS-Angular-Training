@@ -125,6 +125,7 @@ getArrayEle(grid);
   * reduce()
   * some()
   * every()
+  * includes()
 */
 
 /* 

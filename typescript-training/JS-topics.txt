@@ -26,3 +26,4 @@
 19. Error handling, try, catch, throw and finally
 20. Strict mode
 21. Callback
+22. context in JS
