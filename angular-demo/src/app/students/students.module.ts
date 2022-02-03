@@ -10,6 +10,7 @@ import { GenderPipe } from '../pipes/gender.pipe';
 import { FilterPipe } from '../pipes/filter.pipe';
 import { TitlePrefixPipe } from '../pipes/title-prefix.pipe';
 import { ComponentDirectiveComponent } from './component-directive/component-directive.component';
+import { CustomDirective } from '../directives/custom.directive';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ComponentDirectiveComponent } from './component-directive/component-dir
     GenderPipe,
     FilterPipe,
     TitlePrefixPipe,
-    ComponentDirectiveComponent
+    ComponentDirectiveComponent,
+    CustomDirective
   ],
   imports: [
     CommonModule,
